@@ -9,18 +9,13 @@ int main(int argc, char *argv[]) {
 	printf("정수를 입력하시오 : ");
 	scanf("%i",&x);
 	
-	if(x>0)
-	{
-	printf("\n 양수입니다");
-	}
-	else if (x== 0)
-	{
-		printf("0 입니다.");
-	}
+	if(x<0)
+
+	printf("절대값은 %i 입니다",-x);
+	
 	else
-	{
-	printf("\n 음수입니다");
-	}
-	 
+	
+	printf("절대값은 %i 입니다",x);
+		 
 	return 0;
 }
