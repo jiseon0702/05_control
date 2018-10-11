@@ -6,27 +6,35 @@
 int main(int argc, char *argv[]) {
 	
 	int num=0;
-	char str[100];
-	char c;
+	int answer=22;
+	int c;
 	
-	
-	//string
-	
-	printf("input a char  : ");
-	
-	
-	while( (c=getchar() )!= '\n')
+	do
 	{
-		if('0'<= c && c <= '9')
-		{
+		printf("Guess a number : ");
+		scanf("%i",&c);
 		num++;
+		
+		if ( c< answer)
+		{
+			printf("low!\n");
 		}
-	}
+		
+		else if (c > answer)
+		{
+			printf("high!\n");
+		}
+		
+		else
+		{
+			printf("정답 !!\n");
+			
+		}
+		
+		}while  (c!=answer);
+		
+		
+	printf("시도한 횟수는 %i이다",num);
 	
-	printf("숫자는 %i 개  있습니다",num);
-	
-	
-	
-		 
 	return 0;
 }
