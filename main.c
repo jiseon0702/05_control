@@ -5,25 +5,27 @@
 
 int main(int argc, char *argv[]) {
 	
-	char x;
-	printf("input a char : ");
-	scanf("%c",&x);
-	
-	if('A'<= x&&x <='Z')
-
-	printf("이 문자는 대문자입니다");
-	
-	else if('a'<= x&&x <= 'z') 
-	printf ("이 문자는 소문자입니다");
-	
-	else if('0'<= x &&x <= '9')
+	int num=0;
+	char str[100];
+	char c;
 	
 	
-	printf("이 문자는 숫자입니다");
+	//string
 	
-	else
+	printf("input a char  : ");
 	
-	printf("이 문자는 기타 입니다");
+	
+	while( (c=getchar() )!= '\n')
+	{
+		if('0'<= c && c <= '9')
+		{
+		num++;
+		}
+	}
+	
+	printf("숫자는 %i 개  있습니다",num);
+	
+	
 	
 		 
 	return 0;
